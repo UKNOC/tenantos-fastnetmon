@@ -33,14 +33,12 @@ sudo chmod +x /opt/fastnetmon-community/ip_ban_notifier.sh
 ```
 
 3. Configure FastNetMon to use the notification script:
-```bash
-sudo cp notify_about_attack.sh /opt/fastnetmon/
-sudo chmod +x /opt/fastnetmon/notify_about_attack.sh
-```
+
+We recommend adjusting the default config to call /opt/fastnetmon-community/notify_about_attack.sh
 
 ## Configuration
 
-1. Edit `/opt/fastnetmon/notify_about_attack.sh`:
+1. Edit `/opt/fastnetmon-community/notify_about_attack.sh`:
 ```bash
 #!/bin/bash
 /opt/fastnetmon-community/actions.sh $1 $2 $3 $4
